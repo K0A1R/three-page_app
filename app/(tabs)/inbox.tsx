@@ -7,17 +7,17 @@ import {
   StatusBar,
 } from "react-native";
 
-const index = () => {
+const inbox = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text>Home</Text>
+        <Text>Inbox</Text>
       </View>
     </SafeAreaView>
   );
 };
 
-export default index;
+export default inbox;
 
 const styles = StyleSheet.create({
   container: {
