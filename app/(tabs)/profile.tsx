@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, FlatList, Dimensions, SafeAreaView } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, FlatList, Dimensions, SafeAreaView, Platform, StatusBar } from 'react-native';
 import { Ionicons, AntDesign, Entypo, SimpleLineIcons } from "@expo/vector-icons";
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
@@ -110,8 +110,8 @@ const Profile = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff' },
-  topBar: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 10, borderBottomWidth: 1, borderBottomColor: "#ddd" },
+  container: { flex: 1, paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0 },
+  topBar: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 10 },
   topUsernameContainer: { flexDirection: "row", alignItems: "center", position: "absolute", left: "50%", transform: [{ translateX: -50 }] },
   topUsername: { fontSize: 18, fontWeight: "bold" },
   topIcons: { flexDirection: "row", alignItems: "center" },
